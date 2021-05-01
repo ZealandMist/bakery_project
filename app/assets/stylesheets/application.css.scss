@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ @media only screen and (max-width: 768px) {
+  .cookie-info {
+    position: absolute;
+    top: 150px;
+  }
+}
