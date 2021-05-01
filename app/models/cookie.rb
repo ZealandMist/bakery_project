@@ -3,6 +3,10 @@ class Cookie < ActiveRecord::Base
   
   validates :storage, presence: true
 
+  def filling_words
+    fillings.blank? ? "no fillings" : fillings
+  end
+  
   def ready?
     true
   end
