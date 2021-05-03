@@ -8,6 +8,6 @@ class Cookie < ActiveRecord::Base
   end
   
   def ready?
-    true
+    baked ?  "It's still baking! Wait for it to be done." : "(Your Cookie is Ready)"
   end
 end
