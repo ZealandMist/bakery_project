@@ -1,14 +1,9 @@
 %h3= @oven.name
 
 .cookie-info
-  Cookie in oven:
   - if @oven.cookie
-    1 cookie with #{@oven.cookie.filling_words}
-    - if @oven.cookie.baked == true
-      (Your Cookie is Ready)
-      = button_to "Retrieve Cookie", empty_oven_path, class: 'button tiny'
-    - else 
-      It's still baking! Wait for it to be done.
+    .content 
+    = render 'baking_cookies'
   - else
     None
 
